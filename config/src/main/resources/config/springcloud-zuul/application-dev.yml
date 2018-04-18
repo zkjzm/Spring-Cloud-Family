@@ -1,0 +1,33 @@
+server:
+  port: 8400
+spring:
+#  redis:
+#    host: 172.17.0.1
+#    # password: 123456
+#    port: 6379
+  profiles:
+    active: dev
+zuul:
+  routes:
+    springcloud-consumer-config: /consumer/**
+    springcloud-provider-config: /provider/**
+    user-service: /user/**
+    
+#keycloak:
+#  realm : springcloud-zuul
+#  auth-server-url : http://127.0.0.1:8080/auth
+#  ssl-required : external
+#  resource : springcloud-zuul
+#  credentials.secret : 11111111-1111-1111-1111-111111111111
+#  use-resource-role-mappings : true
+#  enable-basic-auth: true
+#  securityConstraints:
+#    - authRoles: user
+#      securityCollections:
+#         - patterns:  /provider/user/info
+#    - authRoles: users
+#      securityCollections:
+#         - patterns:  /consumer/user/list
+#    - authRoles: test
+#      securityCollections:
+#         - patterns:  /provider/user/list

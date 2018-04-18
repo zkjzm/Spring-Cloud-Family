@@ -1,0 +1,7 @@
+# server:
+#   port: 8200
+# spring:
+#   redis:
+#     host: 172.17.0.1
+#     # password: 123456
+#     port: 6379

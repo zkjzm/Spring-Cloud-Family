@@ -1,0 +1,14 @@
+server:
+  port: 8400
+spring:
+#   redis:
+#     host: 172.17.0.1
+#     # password: 123456
+#     port: 6379
+  profiles:
+    active: production
+zuul:
+  routes:
+    springcloud-consume-config: /consumer/**
+    springcloud-provider-config: /provider/**
+    user-service: /user/**

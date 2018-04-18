@@ -1,0 +1,15 @@
+server:
+  port: 8201
+logging:
+  level:
+    com.yuanshang.smart.feign.MFeignClient: debug
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 8000
